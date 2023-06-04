@@ -1,0 +1,127 @@
+.Land {
+    background-color: $Very-Pale-Cyan;
+    background-image: url("../img/bg-hero-mobile.svg");
+    background-repeat: no-repeat;
+    
+  #{&}_header {
+    display: flex;
+    padding: 1rem;
+    h1{
+        flex: 1;
+        img{
+            max-width: 300px
+        }
+    }
+    button {
+      @include button-radius;
+      padding: .4rem 1.2rem;
+      background-color:#fff ;
+      font-weight: bold;
+      @include shadow(rgba(0, 0, 0, 0.2));
+      &:active{
+        color: #696868;
+      }
+    }
+    
+  }
+  #{&}_title{
+    font-size: 1.3rem;
+    font-weight: bold;
+    @include aline-center(80%);
+  }
+  #{&}_article{
+
+    gap: 1rem;
+    @include aline-center(80%);
+    button{
+        @include aline-center(80%);
+        @include button-radius;
+        padding: 1rem 0;
+        background-color: $Pink;
+        color: #fff;
+        @include shadow(rgba(255, 82, 191,0.4));
+        &:active{
+            background-color: $Pale-pink;
+        }
+    }
+    img{
+        @include aline-center(100%);
+
+    }
+  }
+}
+@include media-md{
+  .Land {
+  #{&}_article{
+    img{
+        width: 60%;
+
+    }
+}}}
+
+@include media-lg{
+  .Land{
+    #{&}_header {
+      button{
+        padding: 0 2rem;
+        font-size: 1rem;
+      }
+    }
+    background-image: url('../img/bg-hero-desktop.svg');
+  
+  #{&}_article{
+    padding: 7rem 0;
+    font-size: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    div,img{
+    width: 50%;
+  }
+  div{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+  }
+  h2{
+    margin: 0;
+    text-align: start;
+    font-size: 2rem;
+  }
+  p{
+    text-align: start;
+    font-size: 1.1rem;
+  }
+  button{
+    padding: 1.4rem ;
+    align-self: flex-start;
+    margin: 0;
+    font-size: .8rem;
+    width: 50%;
+
+}
+  }
+}
+}
+
+@include media-xl{
+  .Land{
+  #{&}_article{
+
+  h2{
+
+    font-size: 2.8rem;
+  }
+  p{
+
+    font-size: 1.2rem;
+  }
+  button{
+
+    font-size: 1.2rem;
+
+
+}
+  }
+}
+}
